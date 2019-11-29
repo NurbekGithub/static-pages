@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style2.css" />
+    <title>CMC Tech routes</title>
+  </head>
+  <body>
+    <header>
+      <h1>CMC Tech Routes</h1>
+    </header>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <main>
+      <div id="table">
+        <table border>
+          <thead>
+            <tr>
+              <th>Группа</th>
+              <th>Проект</th>
+              <th>Ссылка</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+  <script>
+    const data = [
+      {
+        group: "Eyelab",
+        project: "<p>Тестовый</p>",
+        link:
+          "<a target='_blank' href='https://94.247.134.157:20016/'>https://94.247.134.157:20016/</a>"
+      },
+      {
+        group: "Eyelab",
+        project: `
+          <p>Боевой</p>
+        `,
+        link:
+          "<a target='_blank' href='https://dr.eyelab.kz/'>https://dr.eyelab.kz/</a>"
+      },
+      {
+        group: "Eyelab",
+        project: "<p>Боевой свой</p>",
+        link:
+          "<a target='_blank' href='https://94.247.134.156:20016/'>https://94.247.134.156:20016/</a>"
+      },
+      {
+        group: "НАЦ",
+        project: "<p>Боевой НАЦ</p>",
+        link:
+          "<a target='_blank' href='https://survey.nacanalytica.com/'>https://survey.nacanalytica.com/</a>"
+      },
+      {
+        group: "НАЦ",
+        project: "<p>Тестовый НАЦ</p>",
+        link:
+          "<a target='_blank' href='https://ias.name/'>https://ias.name/</a>"
+      },
+      {
+        group: "НАЦ",
+        project: "<p>Кастомный НАЦ</p>",
+        link: "<a target='_blank' href='http://ias.name/'>http://ias.name/</a>"
+      },
+      {
+        group: "НАЦ",
+        project: "<p>Кастомный НАЦ (Общий)</p>",
+        link:
+          "<a target='_blank' href='http://ias.name:8081/'>http://ias.name:8081/</a>"
+      },
+      {
+        group: "EyeSee",
+        project: "<p>Тестовый</p>",
+        link:
+          "<a target='_blank' href='https://94.247.134.157:1443/'>https://94.247.134.157:1443/</a>"
+      }
+    ];
+    const tbody = document.querySelector("#table tbody");
+    const body = data
+      .map(
+        obj => `<tr>
+      <td>${obj.group}</td>
+      <td>${obj.project}</td>
+      <td>${obj.link}</td>
+    </tr>`
+      )
+      .join("\n");
+    tbody.innerHTML = body;
+  </script>
+</html>
