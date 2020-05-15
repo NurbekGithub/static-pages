@@ -52,7 +52,6 @@ export default function School({ n, data, normalized }) {
     <div style={{ position: "relative" }}>
       <img src={`/images/${n}.png`} width="100%" />
       {Object.entries(Labels[n]).map(([key, styles]: any) => {
-        console.log({ styles });
         const { str, qnt } = normalized[key];
         return (
           <Label key={key} {...styles}>
